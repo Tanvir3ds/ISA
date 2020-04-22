@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!--
+Start Call To Action
+==================================== -->
+<section class="call-to-action section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h2>Let's Create Something Together</h2>
+				<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin bibendum auctor, <br> nisi elit consequat ipsum, nesagittis sem nid elit. Duis sed odio sitain elit.</p>
+				<a href="{% url 'membership' %}" class="btn btn-main">Membership</a>
+			</div>
+		</div> 		<!-- End row -->
+	</div>   	<!-- End container -->
+</section>   <!-- End section -->
+<br>
+
+<br>
+
+<br>
+<div class="wrapper ">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class=" first">
+       <h1>Memership</h1>
+      </div>
+  
+      <!-- Registration Form -->
+      <form action="memership" method="POST">
+        {% csrf_token %}
+        
+
+
+        <input type="text" name="name" placeholder="Your Name">
+        <input type="email"  name="email" placeholder="Email">
+        <input type="text" name="father_name" placeholder="Father Name">
+        <input type="text" name="mother_name" placeholder="Mother Name">
+        <input type="text" name="occupation" placeholder="Occupation">
+        <input type="text" name="Degisnation" placeholder="Designation">
+
+        <label for="birthday">Date of birth:</label>
+        <input type="date" id="birthday" name="birthday"> 
+
+        <input type="text" name="experence" placeholder="Years of Experence">
+        <input type="text" name="educational_exp" placeholder="Educational Background">
+
+         
+
+        <input type="submit" class=" fourth" value="Apply For Membership">
+      </form>
+      <br>
+      
+  
+  
+    </div>
+  </div>
+
+
+{% endblock %}
